@@ -27,6 +27,8 @@ post '/recipes' do # create action creating and saving new recipe based on param
 
     redirect to "/recipes/#{@recipe.id}"
   end
+  
+  
 
   get '/recipes/:id' do # show action to display a single recipe. dynamic url allows ID to be called in the view thru params hash
     @recipe = Recipe.find_by_id(params[:id])
